@@ -1,0 +1,41 @@
+import{_ as s,o as n,c as e,a2 as p}from"./chunks/framework.vLhlLNVn.js";const i="/assets/stateexample.CUJ_Cc32.png",m=JSON.parse('{"title":"Konfigurations Beispiel","description":"","frontmatter":{"order":5},"headers":[],"relativePath":"de/adapter/esphome/configexample.md","filePath":"de/adapter/esphome/configexample.md","lastUpdated":1794652328000}'),t={name:"de/adapter/esphome/configexample.md"};function l(o,a,r,c,d,u){return n(),e("div",null,[...a[0]||(a[0]=[p(`<h1 id="konfigurations-beispiel" tabindex="-1">Konfigurations Beispiel <a class="header-anchor" href="#konfigurations-beispiel" aria-label="Permalink to &quot;Konfigurations Beispiel&quot;">​</a></h1><h2 id="api-aktivieren" tabindex="-1">API Aktivieren <a class="header-anchor" href="#api-aktivieren" aria-label="Permalink to &quot;API Aktivieren&quot;">​</a></h2><p>Bitte stellen Sie sicher, dass die API aktiviert ist! Optional kann ein Kennwort definieren werden.</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>api:</span></span>
+<span class="line"><span>  password: &#39;MyPassword&#39;</span></span></code></pre></div><p>Der Adapter erkennt automatisch von ESPHome verwaltete Geräte und synchronisiert deren Daten mit ioBroker <a href="https://esphome.io/components/api.html?highlight=api" target="_blank" rel="noreferrer">Siehe Referenz zur ESPHome-API</a></p><h2 id="beispiel-konfiguration" tabindex="-1">Beispiel Konfiguration <a class="header-anchor" href="#beispiel-konfiguration" aria-label="Permalink to &quot;Beispiel Konfiguration&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>esphome:</span></span>
+<span class="line"><span>  name: sensor_badkamer</span></span>
+<span class="line"><span>  platform: ESP32</span></span>
+<span class="line"><span>  board: esp-wrover-kit</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>wifi:</span></span>
+<span class="line"><span>  use_address: 192.168.10.122</span></span>
+<span class="line"><span>  ssid: &quot;xxxxx&quot;</span></span>
+<span class="line"><span>  password: &quot;xxxxxx&quot;</span></span>
+<span class="line"><span>          </span></span>
+<span class="line"><span># Enable ESPHome API</span></span>
+<span class="line"><span>api:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># Activate i2c bus  </span></span>
+<span class="line"><span>i2c:</span></span>
+<span class="line"><span>  sda: 21</span></span>
+<span class="line"><span>  scl: 22</span></span>
+<span class="line"><span>  scan: True</span></span>
+<span class="line"><span>  id: bus_a</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span># Example configuration for bh1750</span></span>
+<span class="line"><span>sensor:</span></span>
+<span class="line"><span>  - platform: bh1750</span></span>
+<span class="line"><span>    name: &quot;Hal_Illuminance&quot;</span></span>
+<span class="line"><span>    address: 0x23</span></span>
+<span class="line"><span>    measurement_time: 69</span></span>
+<span class="line"><span>    update_interval: 10s</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span># Example configuration for an GPIO output    </span></span>
+<span class="line"><span>output:</span></span>
+<span class="line"><span>  - platform: gpio</span></span>
+<span class="line"><span>    pin: 12</span></span>
+<span class="line"><span>    inverted: true</span></span>
+<span class="line"><span>    id: gpio_12</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span># Example configuration linking a switch to the previous defined output</span></span>
+<span class="line"><span>switch:</span></span>
+<span class="line"><span>  - platform: output</span></span>
+<span class="line"><span>    name: &quot;Generic Output&quot;</span></span>
+<span class="line"><span>    output: &#39;gpio_12&#39;</span></span></code></pre></div><h2 id="iobroker-states" tabindex="-1">ioBroker states <a class="header-anchor" href="#iobroker-states" aria-label="Permalink to &quot;ioBroker states&quot;">​</a></h2><p><img src="`+i+'" alt="ioBroker state Exaples"></p>',9)])])}const f=s(t,[["render",l]]);export{m as __pageData,f as default};
